@@ -5,7 +5,7 @@ const ProductCard = ({item}) => {
 
     <div className='cards'>
        <div className="price">
-        <h2 >{item.price} $ </h2>
+        <h3 >{item.price} $ </h3>
       </div>
       
       <img  src={item.image} alt="" />
