@@ -31,7 +31,7 @@ const Header = ({ products, list, setlist }) => {
 
     <div className='header'>
       
-      <div className="btn">
+      <div className="btn-container">
         <button onClick={() => handleClick("all")} className="btn">ALL</button>
         {category.map((item,index) => (
           <button key={index} onClick={() => handleClick(item)} className='btn'>{item}</button>

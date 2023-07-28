@@ -9,8 +9,9 @@ const StarPickerRating = () => {
   };
 
   return (
-    <div>
-      <StarPicker onChange={onChange} value={rating} />
+    <div className='rating'>
+      <StarPicker onChange={onChange} value={rating} doubleTapResets halfStars/>
+      <p>{rating}</p>
     </div>
   );
 };
