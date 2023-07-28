@@ -24,14 +24,14 @@ const Home = () => {
       });
   }
   return (
-    <>
+    <div className='main-container'>
       <Header products={products} list={list} setlist={setlist} />
       <div className='card-container'>
         {list.map((item) => (
           <ProductCard key={item.id} item={item} />
         ))}
       </div>
-    </>
+    </div>
   )
 
 }

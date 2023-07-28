@@ -1,8 +1,8 @@
-
+import StarPickerRating from "./StarPickerRating"
 
 const ProductCard = ({item}) => {
   return (
-
+<div>
     <div className='cards'>
        <div className="price">
         <h3 >{item.price} $ </h3>
@@ -13,6 +13,10 @@ const ProductCard = ({item}) => {
       <div className="card-over">
        <h2 className="title">{item.title}</h2>
       </div>
+      
+
+    </div>
+    <StarPickerRating/>
     </div>
   )
 }
