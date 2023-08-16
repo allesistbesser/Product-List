@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import StarPicker from 'react-star-picker';
 
 const StarPickerRating = () => {
-  const [rating, setRating] = useState(null);
+  const [rating, setRating] = useState();
 
   const onChange = (value) => {
     setRating(value);
@@ -10,7 +10,7 @@ const StarPickerRating = () => {
 
   return (
     <div className='rating'>
-      <StarPicker onChange={onChange} value={rating} doubleTapResets halfStars/>
+      <StarPicker onChange={onChange} value={rating} doubleTapResets halfStars />
       <p>{rating}</p>
     </div>
   );
