@@ -16,7 +16,7 @@ const ProductCard = ({item}) => {
       
 
     </div>
-    <StarPickerRating/>
+    <StarPickerRating id={item.id}/>
     </div>
   )
 }
