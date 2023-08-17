@@ -14,13 +14,20 @@ const Home = () => {
   const handleChange = (event, value) => {
     setPage(value);
   };
-
-  let countPage = 5
-  const step = list.length / countPage
+  // sayfada kac ürün görmek istiyorsun  productCount
+  let productCount = 4
+  // sayfa sayisi pageCount
+  let pageCount = list.length < productCount ? 1 : Math.floor(list.length / productCount)
+  
+  const step = list.length / pageCount
 
   useEffect(() => {
     getProduct()
   }, [])
+
+  useEffect(()=>{
+    setPage(1)
+  },[list])
 
   const getProduct = () => {
     const BASE_URL = 'https://fakestoreapi.com/products'
@@ -33,6 +40,7 @@ const Home = () => {
         console.log(err)
       });
   }
+  console.log(list.length);
   return (
     <div className='main-container'>
       <Header products={products} list={list} setlist={setlist} />
